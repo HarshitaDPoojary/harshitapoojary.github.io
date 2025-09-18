@@ -35,9 +35,8 @@ const EXPERIENCES = [
     date: "Jun 2024 – Aug 2024",
     icon: withBase("/images/zerotrue.jpg"),
     points: [
-      "Partnered with founders/clients to design SQL/Python-integrated dashboards; delivered interactive demos and best-practice guidance.",
-      "Implemented 5 Vuetify UI components, reducing client reporting errors by ~15%.",
-      "Optimized GPU inference efficiency by ~30% to scale intensive workflows under tight resources.",
+      "Worked alongside founders/clients to design SQL/Python-integrated dashboards; delivered interactive demos and best-practice guidance.",
+      "Implemented 5 Vuetify UI components including  Lists, Dropdown, Navigation bar for the notebook.",
     ],
   },
   {
@@ -79,7 +78,7 @@ const EXPERIENCES = [
       "Built microservices & REST APIs serving ML-driven recommendations for 100M+ users; increased engagement ~20%.",
       "Designed ingestion pipelines and complex SQL across fragmented data to improve throughput and aggregation.",
       "Analyzed behaviors across 10 campaigns (regression/time-series) to improve CTR and ROI.",
-      "Partnered with PMs/frontend to cut latency ~15% and boost engagement ~12%.",
+      "Collaborated with PMs/frontend to cut latency ~15% and boost engagement ~12%.",
     ],
   },
   {

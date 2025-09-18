@@ -141,26 +141,23 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src={withBase("/images/about-image.png")} width={500} height={500} alt="" />
+        <Image src={withBase("/images/About1.png")} width={500} height={500} alt="" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-          I am a fourth-year Computer Engineering student at the University of Florida, with a passion for 
-          understanding how technology works. From a young age, I was fascinated by how everyday objects like cell phones 
-          enable communication over long distances. While I’ve always enjoyed using technology, building it is where my true interest lies.
-           In high school, I developed a love for programming and problem-solving, 
-          which led me to pursue a Bachelor of Science in Computer Engineering, with a minor in Business Administration at UF. 
-        
-          In my free time, I enjoy interfacing with new technologies and microprocessor systems. I also enjoy learning about AI in 
-          embedded systems and software development. The purpose of this website is to showcase my passion for technology and my skills. Please feel
-          free to leave any feedback, thank you!
-          
-         
-          
-         
-          
+          <div className="space-y-6 text-base lg:text-lg text-justify">
+            <p className="leading-relaxed">
+              I am a Data Scientist and Machine Learning Engineer with over 4.5 years of experience building AI systems that scale. I recently earned my Master’s in Computer Science from the University of Southern California, where I specialized in deep learning, NLP, and efficient ML deployment.
+            </p>
 
-          </p>
+            <p className="leading-relaxed">
+              My work spans real-time facial recognition and spoof detection at Reliance Jio, multimodal semantic search and geospatial analysis at USC, and enhancing a reactive notebook platform at Zero-True with dynamic ML visualizations. Along the way, I’ve gained hands-on experience with LLMs, YOLO-based object detection, vector databases, and model optimization techniques like QLoRA and distillation.
+            </p>
+
+            <p className="leading-relaxed">
+              I enjoy bridging research and engineering by prototyping, optimizing, and deploying ML solutions that deliver real-world impact. The purpose of this site is to share my journey and passion for technology—thank you for visiting!
+            </p>
+          </div>
+
           <div className="flex flex-row justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("software_skills")}
