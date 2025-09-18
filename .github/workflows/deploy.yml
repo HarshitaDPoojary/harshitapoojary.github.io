@@ -9,9 +9,18 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  NODE_ENV: production
+  NEXT_PUBLIC_GA_ID: G-WZBBLBD79R
+  NEXT_PUBLIC_BASE_PATH: /harshitapoojary.github.io
+   
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
+      NEXT_PUBLIC_GA_ID: G-WZBBLBD79R
+      NEXT_PUBLIC_BASE_PATH: /harshitapoojary.github.io
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
