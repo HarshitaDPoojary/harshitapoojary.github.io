@@ -3,6 +3,7 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import Link from "next/link";
+import { ArrowTopRightOnSquareIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 // Compact chip
 function SkillPill({ children }) {
@@ -55,6 +56,43 @@ const publications = [
 ];
 
 
+// Compact icon-at-end bullet list
+function PublicationsList() {
+  return (
+    <ul className="list-disc pl-5 space-y-2 marker:text-white/40">
+      {publications.map((p) => (
+        <li key={p.title} className="leading-snug">
+          <span>{p.title}</span>
+          {/* icon right after the sentence */}
+          <span className="ml-2 inline-flex align-middle">
+            {p.external ? (
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open "${p.title}" in a new tab`}
+                title="Open link"
+                className="rounded-md p-1 -my-1 border border-transparent hover:border-white/10 hover:bg-white/10 transition"
+              >
+                <ArrowTopRightOnSquareIcon className="h-4 w-4" />
+              </a>
+            ) : (
+              <Link
+                href={p.href}
+                aria-label={`Open "${p.title}"`}
+                title="Open link"
+                className="rounded-md p-1 -my-1 border border-transparent hover:border-white/10 hover:bg-white/10 transition"
+              >
+                <ChevronRightIcon className="h-4 w-4" />
+              </Link>
+            )}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 
 // Whole section (stacked; no cards)
 function SoftwareSkillsSection() {
@@ -104,24 +142,9 @@ const TAB_DATA = [
   {
     title: "Publications",
     id: "publication",
-    content: (
-      <ul className="list-disc pl-2 space-y-1">
-        {publications.map((p) => (
-          <li key={p.title}>
-            {p.external ? (
-              <a href={p.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-blue-300">
-                {p.title}
-              </a>
-            ) : (
-              <Link href={p.href} className="underline underline-offset-2 hover:text-blue-300">
-                {p.title}
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-    ),
-  },
+    content: <PublicationsList />
+  }
+
 ];
 
 
@@ -141,7 +164,7 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src={withBase("/images/About1.png")} width={500} height={500} alt="" />
+        <Image src={withBase("/images/about-me.png")} width={500} height={500} alt="" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <div className="space-y-6 text-base lg:text-lg text-justify">
