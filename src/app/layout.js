@@ -13,32 +13,35 @@ export const metadata = {
   icons: {
     icon: withBase('/images/favicon.ico'), // Ensure the path matches your favicon
   },
-
 }
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-WZBBLBD79R";
+const isProd = process.env.NODE_ENV === "production";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* GA script loader */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-WZBBLBD79R`}
-          strategy="afterInteractive"
-        />
-        {/* GA init */}
-        <Script id="ga-gtag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', 'G-WZBBLBD79R');
-          `}
-        </Script>
+        {isProd && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+              onError={(e) => console.info("GA blocked or failed to load.", e)}
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
-      <body className={inter.className}>{children}
-      {/* <Analytics /> */}
-      </body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
