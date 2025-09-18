@@ -145,13 +145,16 @@ const ProjectsSection = () => {
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
+          // where you render each card
           <motion.li
             key={index}
+            className="min-w-0"             // ⟵ allows children to truncate instead of overflowing
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
           >
+
             <ProjectCard
               key={project.id}
               title={project.title}
