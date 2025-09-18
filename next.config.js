@@ -1,6 +1,13 @@
-/** @type {import('next').NextConfig} */
+// next.config.js
+const isProd = process.env.NODE_ENV === "production";
+
 module.exports = {
-  output: "export",            // puts the static site in ./out
-  images: { unoptimized: true }, // next/image works on GitHub Pages
-  trailingSlash: true,         // safer for static hosting (/path/index.html)
+  output: "export",
+  images: { unoptimized: true },
+  trailingSlash: true,
+  // only add basePath/assetPrefix in prod (GitHub Pages)
+  ...(isProd ? {
+    basePath: "/harshitapoojary.github.io",
+    assetPrefix: "/harshitapoojary.github.io/",
+  } : {}),
 };
