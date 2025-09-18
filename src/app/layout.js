@@ -27,9 +27,8 @@ export default function RootLayout({ children }) {
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
               strategy="afterInteractive"
-              onError={(e) => console.info("GA blocked or failed to load.", e)}
             />
-            <Script id="ga-init" strategy="afterInteractive">
+            <Script id="ga-gtag" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
