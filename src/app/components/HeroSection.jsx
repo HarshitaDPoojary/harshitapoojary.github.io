@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaLinkedin, FaGithub } from "react-icons/fa"; // Import icons
 
+const withBase = (p) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${p}`
+
+
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -70,7 +73,7 @@ const HeroSection = () => {
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden border-4 border-pink-300">
             <Image
-              src="/images/Harshita-Headshot.jpg"
+              src={withBase("/images/Harshita-Headshot.jpg")}
               alt="hero image"
               className="w-full h-full object-cover rounded-full border-4 border-[#FF1493]"
               layout="fill"

@@ -1,7 +1,7 @@
 // next.config.js
 const repo = "harshitapoojary.github.io";
 const isProd = process.env.NODE_ENV === "production";
-
+console.log(process.env.NODE_ENV)
 /** @type {import('next').NextConfig} */
 module.exports = {
   // Build a fully static site into ./out (required for GitHub Pages)

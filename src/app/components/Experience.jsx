@@ -10,6 +10,8 @@ const COLORS = {
   full:   { card: "#121a2b", arrow: "#1f2a44", ring: "#60a5fa" }, // blue-ish
   intern: { card: "#10221a", arrow: "#1a3a2c", ring: "#34d399" }, // green-ish
 };
+const withBase = (p) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${p}`
+
 
 // Your data
 const EXPERIENCES = [
@@ -20,7 +22,7 @@ const EXPERIENCES = [
     company: "Deep Defense Solutions",
     location: "Remote, USA",
     date: "Jul 2025 – Present",
-    icon: "/images/dds.jpg",
+    icon: withBase("/images/dds.jpg"),
     points: [
       "Developing ML pipelines in Python to detect false incident reports for a community-management system and trigger actions.",
     ],
@@ -31,7 +33,7 @@ const EXPERIENCES = [
     company: "Zero-True",
     location: "Remote – New York, USA",
     date: "Jun 2024 – Aug 2024",
-    icon: "/images/zerotrue.jpg",
+    icon: withBase("/images/zerotrue.jpg"),
     points: [
       "Partnered with founders/clients to design SQL/Python-integrated dashboards; delivered interactive demos and best-practice guidance.",
       "Implemented 5 Vuetify UI components, reducing client reporting errors by ~15%.",
@@ -44,7 +46,7 @@ const EXPERIENCES = [
     company: "University of Southern California",
     location: "Los Angeles, USA",
     date: "Jan 2024 – Aug 2024",
-    icon: "/images/usc.png",
+    icon: withBase("/images/usc.png"),
     points: [
       "Analyzed YOLOv5/YOLOv8 on ~10k StreetView images for tent detection/counting; leveraged geospatial metadata to handle noisy urban conditions.",
       "Coded grid-based segmentation to quantify encampment density across ~502.7 sq. miles; produced multi-intensity heatmaps via lat-long clustering.",
@@ -58,7 +60,7 @@ const EXPERIENCES = [
     company: "Reliance Jio",
     location: "Mumbai, India",
     date: "Dec 2021 – Jul 2023",
-    icon: "/images/jio.png",
+    icon: withBase("/images/jio.png"),
     points: [
       "Optimized RetinaFace with TensorRT FP16 on T4/A100 (C++/Python), reducing face registration time ~40% with real-time inference at scale.",
       "Automated CI/CD for JioFace, VMD, and ANPR using Python, Docker, Kubernetes, GitLab, JIRA—improving rollout velocity ~50%.",
@@ -72,7 +74,7 @@ const EXPERIENCES = [
     company: "Reliance Jio",
     location: "Mumbai, India",
     date: "Jun 2019 – Dec 2021",
-    icon: "/images/jio.png",
+    icon: withBase("/images/jio.png"),
     points: [
       "Built microservices & REST APIs serving ML-driven recommendations for 100M+ users; increased engagement ~20%.",
       "Designed ingestion pipelines and complex SQL across fragmented data to improve throughput and aggregation.",
@@ -86,7 +88,7 @@ const EXPERIENCES = [
     company: "TaksyKraft",
     location: "Hyderabad, India (Remote)",
     date: "Jan 2019 – Jun 2019",
-    icon: "/images/taksykraft.jpg",
+    icon: withBase("/images/taksykraft.jpg"),
     points: [
       "Developed engagement-prediction APIs for real-time targeting; improved ROI ~10% across 10+ clients.",
       "Built data pipelines and Tableau dashboards, reducing reporting delays ~40%.",
