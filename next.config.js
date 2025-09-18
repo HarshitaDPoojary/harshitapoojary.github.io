@@ -1,14 +1,14 @@
 // next.config.js
+const repo = "harshitapoojary.github.io";
 const isProd = process.env.NODE_ENV === "production";
-console.log(">>> NODE_ENV:", process.env.NODE_ENV, "isProd:", isProd);
-console.log(">>> basePath:", isProd ? "/harshitapoojary.github.io" : "(none)");
+
+/** @type {import('next').NextConfig} */
 module.exports = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
-  // only add basePath/assetPrefix in prod (GitHub Pages)
   ...(isProd ? {
-    basePath: "/harshitapoojary.github.io",
-    assetPrefix: "/harshitapoojary.github.io/",
+    basePath: `/${repo}`,
+    assetPrefix: `/${repo}/`,
   } : {}),
 };
