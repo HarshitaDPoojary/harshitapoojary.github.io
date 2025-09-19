@@ -110,6 +110,16 @@ function SoftwareSkillsSection() {
   );
 }
 
+function InterestsList() {
+  return (
+    <ul className="list-disc pl-2 space-y-2">
+      <li>Hiking</li>
+      <li>Video Games</li>
+      <li>Reading Poetry</li>
+      <li>Art</li>
+    </ul>
+  );
+}
 const TAB_DATA = [
   {
     title: "Software Skills",
@@ -143,6 +153,11 @@ const TAB_DATA = [
     title: "Publications",
     id: "publication",
     content: <PublicationsList />
+  },
+  {
+    title: "Interests", // change to "Beyond Work" if you like
+    id: "interests",
+    content: <InterestsList />
   }
 
 ];
@@ -203,6 +218,13 @@ const AboutSection = () => {
             >
               {" "}
               Publication{"  "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("interests")}
+              active={tab === "interests"}
+            >
+              {" "}
+              Interests{"  "}
             </TabButton>
           </div>
           <div className="mt-8">
