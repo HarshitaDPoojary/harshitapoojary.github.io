@@ -187,7 +187,7 @@ const AboutSection = () => {
               active={tab === "software_skills"}
             >
               {" "}
-              Software Skills{" "}
+              Software Skills{"  "}
             </TabButton>
     
             <TabButton
@@ -195,14 +195,14 @@ const AboutSection = () => {
               active={tab === "education"}
             >
               {" "}
-              Education{" "}
+              Education{"  "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("publication")}
               active={tab === "publication"}
             >
               {" "}
-              Publication{" "}
+              Publication{"  "}
             </TabButton>
           </div>
           <div className="mt-8">
