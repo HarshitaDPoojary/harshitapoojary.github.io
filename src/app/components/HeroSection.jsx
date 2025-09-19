@@ -74,11 +74,14 @@ const HeroSection = () => {
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden border-4 border-pink-300">
             <Image
               src={withBase("/images/Harshita-Headshot.jpg")}
-              alt="hero image"
-              className="w-full h-full object-cover rounded-full border-4 border-[#FF1493]"
-              layout="fill"
+              alt="Harshita Poojary headshot"
+              fill                 // ← replaces layout="fill"
+              priority             // good for above-the-fold LCP image
+              sizes="(min-width:1024px) 400px, 250px"
+              className="object-cover rounded-full border-4 border-[#FF1493]" // no w/h here when using fill
             />
           </div>
+
         </motion.div>
       </div>
     </section>
