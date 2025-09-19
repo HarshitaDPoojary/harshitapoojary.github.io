@@ -115,7 +115,7 @@ export default function ProjectCard({
       </div>
 
       {/* Bottom actions */}
-      <div className="mt-4 flex flex-wrap gap-2">
+      {/* <div className="mt-4 flex flex-wrap gap-2">
         {gitUrl && (
           <ActionLink href={gitUrl} label={`${title} - source code`}>
             <CodeBracketIcon className="h-4 w-4" />
@@ -128,7 +128,7 @@ export default function ProjectCard({
             <span>Preview</span>
           </ActionLink>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

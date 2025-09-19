@@ -10,86 +10,94 @@ const withBase = (p) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${p}`
 const projectsData = [
   {
     id: 1,
-    title: "Gator Field Notebook",
-    description: "Kotlin-based cross-platform mobile app that enables researchers to efficiently log field data with GPS, integrate environmental data via APIs, and print sample labels",
-    image: withBase("/images/projects/GatorFieldNotebok_Image.png"),
-    tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/Anthony42540/GatorFieldNotebook",
+    title: "Generating Images from Speech",
+    description: "Currenty implementing specialized projectors for aligning speech and image embeddings, along-side mathematical operations for effective model training. In evaluation, our Speech-CLIP encoder model demonstrates commendable efficacy in gen- erating images from speech prompts, although slightly falling short of the text diffusion model’s performance.",
+    image: withBase("/images/projects/GenerateImageFromSpeech.png"),
+    tag: ["All", "NLP", "Computer Vision"],
+    gitUrl: "/",
     previewUrl: "/",
-    techArray: ["Kotlin", "Android", "iOS", "API", "Firebase", "SQLDelight"]
+    techArray: ["Python", "SpeechCLIP", "HuBERT"]
   },
   {
     id: 2,
-    title: "MediConnect",
-    description: "A winning business model for a cross-platform mobile application using React Native, Node.js, and PostgreSQL that helps travelers with chronic conditions navigate foreign healthcare systems, addressing the needs of 1.4 billion global travelers and securing first place in a Berlin Startup Community competition with the highest product valuation among 15 competitors.",
-    image: withBase("/images/projects/MediConnect_Image.png"),
-    tag: ["All", "Mobile"],
-    gitUrl: "https://www.canva.com/design/DAGLw1QBR_U/GIHT0kiq7_oisow5E2bUHA/edit?utm_content=DAGLw1QBR_U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    title: "Multimodal Semantic Search",
+    description: "This project implements a multimodal retrieval system for educational video content, allowing users to search within videos using both text and visual cues. The system uses the BridgeTower model to generate embeddings for both textual and visual data, which are then indexed for fast retrieval.",
+    image: withBase("/images/projects/SemanticModel.png"),
+    tag: ["All", "Computer Vision"],
+    gitUrl: "https://docs.google.com/presentation/u/1/d/1gKB5bTHx_jB24v3w9XJRyK3HHvlUH6aOcllk3BOKZN8/edit?slide=id.g33bc5ad686c_1_26#slide=id.g33bc5ad686c_1_26",
     previewUrl: "/",
-    techArray: ["React", "Node.js", "PostgreSQL", "Business Model"]
+    techArray: ["Python", "LangChain", "Streamlit", "Pinecone", "Llama"]
   },
   {
     id: 3,
-    title: "HelpHub",
-    description: "Full-stack food bank web application built using React, MongoDB, and Express.js that serves University of Florida students by providing real-time inventory tracking and a points-based ordering system, complete with UFID verification and role-based access control for enhanced security and equitable food distribution.",
-    image: withBase("/images/projects/HelpHub_Image.png"),
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/HelpHubGroup/HelpHub",
+    title: "Attention Pruning for Classification in Konkani Language",
+    description: "A hybrid architecture for idiom and metaphor detection in Konkani, integrating Multilingual BERT (mBERT), a BiLSTM layer, and a linear classifier, along with a novel gradient-based attention head pruning strategy.",
+    image: withBase("/images/projects/AttentionPruning.png"),
+    tag: ["All", "NLP"],
+    gitUrl: "https://anonymous.4open.science/r/Konkani_Idiom_Detection-FBE1/README.md",
     previewUrl: "/",
-    techArray: ["React", "MongoDB", "Express.js", "JWT Authentication"]
+    techArray: [ "Python", "PyTorch", "Data Analysis", "scikit learn", "plotly"]  //["React", "MongoDB", "Express.js", "JWT Authentication"]
   },
   {
     id: 4,
-    title: "SwampyBird",
-    description: "Swampy Bird is a University of Florida-themed Flappy Bird-inspired game developed with the Java-based graphics platform Processing, where players guide a Sandhill Crane through tree obstacles in a swampy environment, featuring light/dark modes, adjustable difficulty, and custom visuals and audio.",
-    image: withBase("/images/projects/swampy-bird.png"),
-    tag: ["All", "Games"],
-    gitUrl: "https://github.com/MalloryRose/Swampy-Bird",
+    title: "Knowledge Distillation on GSM8k dataset",
+    description: "Comparison of Model Performance with Knowledge Distillation and 4-bit Quantization)",
+    image: withBase("/images/projects/KnowledgeDistillationGSM8k.png"),
+    tag: ["All", "NLP"],
+    gitUrl: "https://github.com/HarshitaDPoojary/Knowledge-Distillation-GSM8k/tree/main/Code",
     previewUrl: "/",
-    techArray: ["Processing", "Java", "Game Development"]
+    techArray: ["Python", "Data analysis", "RunPods", "Knowledge Distillation", "plotly"]
   },
   {
     id: 5,
-    title: "32-bit MIPS Processor",
-    description: "A 32-bit MIPS processor implementation in VHDL that features a multi-cycle architecture, 256-word RAM with memory-mapped I/O, and supports a comprehensive subset of the MIPS instruction set including arithmetic, logical, memory access, and control flow operations.",
-    image: withBase("/images/projects/MIPS-architecture.png"),
-    tag: ["All", "Hardware/Embedded"],
-    gitUrl: "https://github.com/MalloryRose/MIPS",
+    title: "Person ReIdentification",
+    description: "Currently working on intergrating DeepSORT, yolo models for people tracking, reidentification and counting in sports video",
+    image: withBase("/images/projects/Person ReIdentification.png"),
+    tag: ["All", "Computer Vision"],
+    gitUrl: "https://github.com/HarshitaDPoojary/Person-ReIdentification",
     previewUrl: "/",
-    techArray: ["VHDL", "ModelSim", "Quartus Prime ", "Hardware Design"]
+    techArray: ["Python", "DeepSORT", "YOLO", "OpenCV"]
   },
   {
     id: 6,
-    title: "Bootloader Development",
-    description: "Custom bootloaders for both x86 and ARM platforms. The bootloaders were designed to load and display a message from an external file bin file through the UART protocol, which required work with low-level assembly programming, memory-mapped I/O, and system initialization.",
-    image: withBase("/images/projects/Bootloader.png"),
-    tag: ["All", "Hardware/Embedded"],
-    gitUrl: "https://github.com/MalloryRose/Bootloader",
+    title: "Facial Keypoint Detection",
+    description: "Facial keypoints include points around the eyes, nose, and mouth on a face and are used in many applications. These applications include: facial tracking, facial pose recognition, facial filters, and emotion recognition. The code is able to look at any image, detect faces, and predict the locations of facial keypoints on each face.",
+    image: withBase("/images/projects/Facial Keypoint.png"),
+    tag: ["All", "Computer Vision"],
+    gitUrl: "https://github.com/HarshitaDPoojary/Facial-KeyPoint-Detection",
     previewUrl: "/",
-    techArray: ["Assembly", "x86", "ARM", "UART"]
+    techArray: ["", "", ""]
   },
   {
     id: 7,
-    title: "Synchronous Serial Communication with SPI",
-    description: "Developed a real-time 3D acceleration data acquisition system by configuring the ATxmega128A1U microcontroller to communicate with an LSM6DSL IMU via SPI, visualizing sensor data using SerialPlot over UART-to-USB, and verifying transmission with a logic analyzer.",
-    image: withBase("/images/projects/SPI.png"),
-    tag: ["All", "Hardware/Embedded"],
-    gitUrl: "https://github.com/MalloryRose/SPI",
+    title: "Photoslider",
+    description: "A Web application with CRUD operations for posts along with authentication using Nodejs and Mongodb",
+    image: withBase("/images/projects/PhotoSlider.png"),
+    tag: ["All", "Full Stack"],
+    gitUrl: "https://github.com/HarshitaDPoojary/photoslider/",
     previewUrl: "/",
-    techArray: ["Embedded C", "SerialPlot", "SPI", "UART", "IMU", 
-      "Microprocessors"
-    ]
+    techArray: ["Node.js", "Javascript", "Ejs", "MongoDB", "MySQL", "Redis", "JWT Authentication"]
   },
   {
     id: 8,
-    title: "Minesweeper",
-    description: "Classic game of Minesweeper re-developed in C++",
-    image: withBase("/images/projects/Minesweeper.jpg"),
-    tag: ["All", "Games"],
-    gitUrl: "https://github.com/MalloryRose/MineSweeper/tree/master",
+    title: "Image Captioning",
+    description: "The project involves using a Convolutional Neural Network (CNN) encoder, like ResNet, to extract image features and a Recurrent Neural Network (RNN) decoder, often using LSTM cells, to generate the caption sequence.It also includes usign attention for generating similar outcome",
+    image: withBase("/images/projects/ImageCaptioning.png"),
+    tag: ["All", "Computer Vision"],
+    gitUrl: "https://github.com/HarshitaDPoojary/Image-Captioning/",
     previewUrl: "/",
-    techArray: ["C++", "SFML", "Game Development"]
+    techArray: ["Python", "PyTorch", "Attention", "Data Analysis"]
   },
+  {
+    id: 9,
+    title: "Sentiment Analysis with Sagemaker",
+    description: "The application performs sentiment analysis on movie reviews through a simple web page which interacts with the deployed endpoint. This project is implemented in Amazon EC2 instance incorporating techniques using XGBoost, Lamba functions, API gateways.",
+    image: withBase("/images/projects/Sagemaker.png"),
+    tag: ["All", "NLP", "Full Stack"],
+    gitUrl: "https://github.com/HarshitaDPoojary/deployment-sagemaker/tree/master/Project",
+    previewUrl: "/",
+    techArray: ["Python", "Amazon EC2", "HTML", "CSS", "Lambda Functions", "Web Hosting"]
+  }
 ];
 
 
@@ -124,24 +132,24 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="NLP"
+          isSelected={tag === "NLP"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Computer Vision"
+          isSelected={tag === "Computer Vision"}
         />
           <ProjectTag
           onClick={handleTagChange}
-          name="Hardware/Embedded"
-          isSelected={tag === "Hardware/Embedded"}
+          name="Full Stack"
+          isSelected={tag === "Full Stack"}
         />
-        <ProjectTag
+        {/* <ProjectTag
           onClick={handleTagChange}
           name="Games"
           isSelected={tag === "Games"}
-        />
+        /> */}
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
