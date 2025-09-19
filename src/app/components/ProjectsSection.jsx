@@ -66,7 +66,7 @@ const projectsData = [
     tag: ["All", "Computer Vision"],
     gitUrl: "https://github.com/HarshitaDPoojary/Facial-KeyPoint-Detection",
     previewUrl: "/",
-    techArray: ["", "", ""]
+    techArray: ["Python", "CNN", "Image Processing", "OpenCV"]
   },
   {
     id: 7,
