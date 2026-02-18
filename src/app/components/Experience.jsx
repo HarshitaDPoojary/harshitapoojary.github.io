@@ -17,7 +17,7 @@ const withBase = (p) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${p}`
 const EXPERIENCES = [
   // Internships
   {
-    type: "intern",
+    type: "full",
     title: "AI Engineer",
     company: "Deep Defense Solutions",
     location: "Remote, USA",
