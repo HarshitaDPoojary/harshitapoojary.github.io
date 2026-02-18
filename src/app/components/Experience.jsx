@@ -18,13 +18,13 @@ const EXPERIENCES = [
   // Internships
   {
     type: "intern",
-    title: "AI Intern",
+    title: "AI Engineer",
     company: "Deep Defense Solutions",
     location: "Remote, USA",
     date: "Jul 2025 – Present",
     icon: withBase("/images/dds.jpg"),
     points: [
-      "Developing ML pipelines in Python to detect false incident reports for a community-management system and trigger actions.",
+      "Developing Agentic AI pipelines to check hoax probability of user submitted reports.",
     ],
   },
   {
