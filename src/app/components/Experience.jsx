@@ -21,7 +21,7 @@ const EXPERIENCES = [
     company: "CVS Pharmacy",
     location: "Remote, USA",
     date: "Jun 2026 – Present",
-    icon: withBase("/images/cvs health.jpg"),
+    icon: withBase("/images/cvs logo.png"),
     points: [
       "Engineered an automated Databricks pipeline for standard-template rebate requests, reducing downstream final-processing runs by 30% through automated rate generation, quality checks, and queue-based orchestration.",
       "Resolved 10+ production defects and cut debugging turnaround by 5% across formulary ingestion, rate generation, and forecast review by tracing failures through Azure Application Insights (KQL), Databricks job logs, and MySQL query plans, and adding unit, functional, and regression test coverage.",
