@@ -15,16 +15,29 @@ const withBase = (p) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${p}`
 
 // Your data
 const EXPERIENCES = [
+  {
+    type: "full",
+    title: "Software Engineer",
+    company: "CVS Pharmacy",
+    location: "Remote, USA",
+    date: "Jun 2026 – Present",
+    icon: withBase("/images/cvs.png"),
+    points: [
+      "Engineered an automated Databricks pipeline for standard-template rebate requests, reducing downstream final-processing runs by 30% through automated rate generation, quality checks, and queue-based orchestration.",
+      "Resolved 10+ production defects and cut debugging turnaround by 5% across formulary ingestion, rate generation, and forecast review by tracing failures through Azure Application Insights (KQL), Databricks job logs, and MySQL query plans, and adding unit, functional, and regression test coverage.",
+    ],
+  },
   // Internships
   {
     type: "full",
     title: "AI Engineer",
     company: "Deep Defense Solutions",
     location: "Remote, USA",
-    date: "Jul 2025 – Present",
+    date: "Jul 2025 – Jun 2026",
     icon: withBase("/images/dds.jpg"),
     points: [
-      "Developing Agentic AI pipelines to check hoax probability of user submitted reports.",
+      "Built Agentic AI pipeline architecture using Python, LangChain, REST APIs, and Elasticsearch vector stores to identify false incident reports, automate routing, and reduce manual verification load for internal operations teams.",
+      "Built guardrail-aware LLM workflows with finetuned ML and VLM models to classify incident reports by severity, credibility, and escalation risk, adding confidence scoring and fallback paths to prevent low-confidence AI outputs from triggering automated decisions.",
     ],
   },
   {
